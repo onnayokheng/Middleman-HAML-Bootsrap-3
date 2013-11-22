@@ -21,49 +21,6 @@
     }
 }());
 
-/** 
- * Language Parsley **/
-window.ParsleyConfig = window.ParsleyConfig || {};
-
-(function ($) {
-  window.ParsleyConfig = $.extend( true, {}, window.ParsleyConfig, {
-    messages: {
-      // parsley //////////////////////////////////////
-        defaultMessage: "tidak valid."
-      , type: {
-            email:      "harus berupa email yang valid."
-          , url:        "harus berupa url yang valid."
-          , urlstrict:  "harus berupa url yang valid."
-          , number:     "harus berupa angka yang valid."
-          , digits:     "harus berupa digit."
-          , dateIso:    "harus berupa tanggal yang valid (YYYY-MM-DD)."
-          , alphanum:   "harus berupa alfanumerik."
-        }
-      , notnull:        "tidak boleh null."
-      , notblank:       "tidak boleh kosong."
-      , required:       "wajib diisi."
-      , regexp:         "tidak valid."
-      , min:            "harus lebih besar daripada %s."
-      , max:            "harus lebih kecil daripada %s."
-      , range:          "harus diantara %s sampai dengan %s."
-      , minlength:      "terlalu pendek. Harus memiliki %s karakter atau lebih."
-      , maxlength:      "terlalu panjang. Harus memiliki %s karakter atau kurang."
-      , rangelength:    "Panjang tidak valid. Harus memiliki panjang di antara %s sampai dengan %s karakter."
-      , equalto:        "harus sama."
-      , mincheck:       "Anda harus memilih minimal %s pilihan."
-      , maxcheck:       "Anda harus memilih %s pilihan atau kurang."
-      , rangecheck:     "Anda harus memilih diantara %s sampai %s pilihan."
-
-      // parsley.extend ///////////////////////////////
-      , minwords:       "harus memiliki minimum %s kata."
-      , maxwords:       "harus memiliki maksimum %s kata."
-      , rangewords:     "harus diantara %s sampai %s kata."
-      , greaterthan:    "harus lebih besar daripada %s."
-      , lessthan:       "harus lebih kecil daripada %s."
-    }
-  });
-}(window.jQuery || window.Zepto));
-
 /* Parsley dist/parsley.min.js build version 1.1.17-dev http://parsleyjs.org */
 !function(d){var h=function(a){this.messages={defaultMessage:"This value seems to be invalid.",type:{email:"This value should be a valid email.",url:"This value should be a valid url.",urlstrict:"This value should be a valid url.",number:"This value should be a valid number.",digits:"This value should be digits.",dateIso:"This value should be a valid date (YYYY-MM-DD).",alphanum:"This value should be alphanumeric.",phone:"This value should be a valid phone number."},notnull:"This value should not be null.",
 notblank:"This value should not be blank.",required:"This value is required.",regexp:"This value seems to be invalid.",min:"This value should be greater than or equal to %s.",max:"This value should be lower than or equal to %s.",range:"This value should be between %s and %s.",minlength:"This value is too short. It should have %s characters or more.",maxlength:"This value is too long. It should have %s characters or less.",rangelength:"This value length is invalid. It should be between %s and %s characters long.",
@@ -304,13 +261,6 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 // make it safe to use console.log always
 (function(a){function b(){}for(var c="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),d;!!(d=c.pop());){a[d]=a[d]||b;}})
 (function(){try{console.log();return window.console;}catch(a){return (window.console={});}}());
-
-/**
- * Imagesloaded
- */
-(function(c,n){var k="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";c.fn.imagesLoaded=function(l){function m(){var b=c(h),a=c(g);d&&(g.length?d.reject(e,b,a):d.resolve(e));c.isFunction(l)&&l.call(f,e,b,a)}function i(b,a){b.src===k||-1!==c.inArray(b,j)||(j.push(b),a?g.push(b):h.push(b),c.data(b,"imagesLoaded",{isBroken:a,src:b.src}),o&&d.notifyWith(c(b),[a,e,c(h),c(g)]),e.length===j.length&&(setTimeout(m),e.unbind(".imagesLoaded")))}var f=this,d=c.isFunction(c.Deferred)?c.Deferred():
-0,o=c.isFunction(d.notify),e=f.find("img").add(f.filter("img")),j=[],h=[],g=[];e.length?e.bind("load.imagesLoaded error.imagesLoaded",function(b){i(b.target,"error"===b.type)}).each(function(b,a){var e=a.src,d=c.data(a,"imagesLoaded");if(d&&d.src===e)i(a,d.isBroken);else if(a.complete&&a.naturalWidth!==n)i(a,0===a.naturalWidth||0===a.naturalHeight);else if(a.readyState||a.complete)a.src=k,a.src=e}):m();return d?d.promise(f):f}})(jQuery);
-
 
 /**
  * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch and iPad, should also work with Android mobile phones (not tested yet!)
