@@ -16,6 +16,7 @@
 - Images loaded event
 - log - paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
 - jQuery Touchwipe Plugin - http://www.netcu.de/jquery-touchwipe-iphone-ipad-library
+- Font Awesome v4.0.3 - http://fontawesome.io
 
 ##Author
 - Email: onnay.okheng@gmail.com
