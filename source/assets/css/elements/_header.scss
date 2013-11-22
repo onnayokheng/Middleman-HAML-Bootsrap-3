@@ -1,0 +1,243 @@
+.header__content {
+	padding: 20px 0;
+	@include make-row();
+
+	.header_content__signature,
+	.header__content__title,
+	.header__content__social {
+		@include make-lg-column(4);
+		@include make-md-column(4);
+	}
+
+	.header__content__title {
+		text-align: center;
+		margin-top: 10px;
+	}
+}
+
+.social-account {
+	list-style: none;
+	margin: 20px 0 0;
+	padding: 0;
+	text-align: right;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			background: $gray;
+			text-decoration: none;
+			text-align: center;
+			width: 31px;
+			height: 31px;
+			padding-top: 6px;
+			&:hover {
+				background: $gray-light;
+			}
+		}
+		i {
+			color: $white;
+			font-size: 18px;
+		}
+	}
+}
+
+.header__navigation {
+	margin-top: 10px;
+	@include make-row();
+	overflow: visible !important;
+}
+
+.main-menu {
+	@include make-lg-column(12);
+	@include make-md-column(12);
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	li {
+		display: inline-block;
+		@include make-lg-column(4);
+		@include make-md-column(4);
+		position: relative;
+
+		&:nth-child(2) {
+			&:before,
+			&:after {
+				content: "";
+				width: 1px;
+				height: 30px;
+				position: absolute;
+				background: $gray;
+				top: 50%;
+				margin-top: -15px;
+				left: 0;
+			}
+			&:after {
+				right: 0;
+				left: 100%;
+			}
+		}
+		&.current {
+			
+			a {
+				color: $gray-darker;
+				position: relative;
+
+				&:after {
+					bottom: 100%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+				}
+
+				&:after {
+					border-color: rgba(10, 42, 58, 0);
+					border-bottom-color: $gray-darker;
+					border-width: 15px;
+					left: 50%;
+					margin-left: -15px;
+					bottom: -30px;
+				}
+			}
+		}
+	}
+	a {
+		color: $gray;
+		text-decoration: none;
+
+		&:hover {
+			color: $gray-darker;
+		}
+		span {
+			display: block;
+			font-family: $font-family-sans-serif;
+			&.menu-top {
+				font-weight: 200;
+				letter-spacing:3px;
+				text-transform: uppercase;
+			}
+			&.menu-text {
+				font-size: 24px;
+				font-weight: 600;
+				text-transform: uppercase;
+				margin: 4px 0;
+			}
+			&.menu-desc {
+				font-weight: 200;
+				font-family: $font-family-serif;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+
+// Sticky Menu
+// -------------------------
+.sticky-menu {
+	background: $gray-darker;
+	width: 100%;
+	z-index: 3;
+	@include box-shadow(0 5px 5px rgba(0, 0, 0, .2));
+
+	.sticky__content {
+		@include make-row();
+		padding: 20px 0;
+	}
+	.sticky__content_logo,
+	.sticky__content_action {
+		@include make-lg-column(3);
+	}
+	.sticky__content_action {
+		text-align: right;
+		a {
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-size: 13px;
+			padding: 10px 40px;
+			&:hover {
+				background: $kuning;
+				border-color: $kuning;
+			}
+		}
+	}
+	.sticky__content_menu {
+		@include make-lg-column(6);
+		ul {
+			list-style: none;
+			margin: 8px 0 0;
+			padding: 0;
+			text-align: center;
+		}
+		li {
+			display: inline-block;
+			text-align: center;
+			padding: 0 20px;
+			margin: 0;
+			position: relative;
+			&.current {
+				a {
+					color: $white;
+				}
+			}
+			&.current {
+				a {
+					color: $white;
+					position: relative;
+
+					&:after {
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+					}
+
+					&:after {
+						border-color: rgba(255, 255, 255, 0);
+						border-bottom-color: $white;
+						border-width: 10px;
+						left: 50%;
+						margin-left: -10px;
+						bottom: -30px;
+					}
+				}
+			}
+			&:first-child:after {
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 18px;
+				right: 0;
+				top: 50%;
+				margin-top: -7px;
+				background: $gray;
+			}
+		}
+		a {
+			color: $gray;
+			text-decoration: none;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+.sticky-wrapper {
+	visibility: hidden;
+	height: 0 !important;
+	&.is-sticky {
+		visibility: visible;
+		height: auto;
+	}
+}
+
+
+

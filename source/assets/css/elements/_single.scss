@@ -1,0 +1,151 @@
+// Global post content
+.content-wrapper {
+	margin-top: 50px;
+}
+.main-content {
+	@include make-lg-column(8);
+	@include make-lg-column-offset(2);
+}
+.content-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
+.content-wrap {
+	margin-bottom: 50px;
+	.post-title {
+		margin-top: 5px;
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 15px;
+		color: $gray-darker;
+		a {
+			color: $gray-darker;
+			text-decoration: none;
+			&:hover {
+				color: $gray;
+			}
+		}
+	}
+	h2.post-title {
+		font-size: 41px;
+		font-weight: 400;
+	}
+	.post-meta {
+		font-size: 13px;
+		margin-bottom: 10px;
+		color: $gray-light;
+		span {
+			margin-right: 10px;
+		}
+		i {
+			padding-right: 5px;
+		}
+	}
+	.post-entry {
+		p {
+			font-size: 16px;
+			color: $gray-dark;
+			margin-bottom: 30px;
+			line-height: 1.6;
+		}
+		.caption-image {
+			text-align: center;
+			font-style: italic;
+			font-size: 13px;
+			font-weight: 200;
+			margin-top: 10px;
+		}
+	}
+
+	h1,
+	h2 {
+		font-size: 41px;
+	}
+	h3,
+	h4 {
+		font-size: 24px;
+	}
+	h5,
+	h6 {
+		font-size: 16px;
+	}
+	h1,
+	h3,
+	h5 {
+		font-weight: bold;
+	}
+	.sub-title {
+		color: $gray-darker;
+	}
+	blockquote {
+		font-size: 24px;
+		font-weight: 400;
+		border: none;
+	}
+	.post-footer {
+		margin-top: 30px;
+	}
+}
+
+#main__content_related {
+	background: $gray-lighter;
+	padding: 50px 0 10px;
+	margin-bottom: 50px;
+}
+.related_content_wrap {
+	@include make-lg-column(8);
+	.post-meta {
+		span {
+			margin-right: 5px;
+		}
+		i {
+			padding-right: 0;
+		}
+	}
+	.post-video {
+		img {
+			margin-bottom: 10px;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			color: $gray-darker;
+			font-weight: bold;
+			&:hover {
+				color: $gray;
+				@include opacity(.85);
+			}
+		}
+	}
+}
+
+.artikel_action {
+	a {
+		font-size: 11px;
+		letter-spacing: 3px;
+		padding: 10px 20px;
+	}
+}
+
+.comment__content_wrap {
+	@include make-lg-column(8);
+	@include make-lg-column-offset(2);
+	margin-bottom: 50px;
+	.comment-count {
+		margin-top: 0;
+		font-size: 41px;
+		color: $gray-darker;
+		font-weight: 600;
+	}
+	.comment-action {
+		padding: 5px 20px;
+		font-size: 14px;
+		border: 3px solid $gray-light;
+		color: $gray-light;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+}
+

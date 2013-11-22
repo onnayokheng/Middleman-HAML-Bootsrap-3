@@ -1,0 +1,40 @@
+.site-footer {
+	background: $gray-lighter;
+	padding: 13px 0;
+	margin-top: 50px;
+
+	.site-footer__content {
+		@include make-row();
+	}
+	.footer__content_signature {
+		@include make-lg-column(4);
+		@include make-md-column(4);
+	}
+	.site-footer--navigation {
+		@include make-lg-column(8);
+		@include make-md-column(8);
+
+		ul {
+			list-style: none;
+			text-align: right;
+			padding: 0;
+			margin: 20px 0 0;
+			li {
+				display: inline-block;
+				margin-left: 10px;
+				&.current {
+					a {
+						color: $gray;
+					}
+				}
+			}
+			a {
+				color: $gray-dark;
+				text-decoration: none;
+				&:hover {
+					color: $gray;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+/**
+ * Theme: Master Middleman HAML Bootstrap
+ * Version: 1.0
+ * Author: @onnayokheng
+ * Copyright: (c) 2013 onnayokheng.com
+ * Create: Nov 22, 2013
+ * Modified: -
+ * ------------------------------------------------------------------------------------------- */
+
+@charset "utf-8";
+
+// Importing global variables framework from compass
+// It will help you without creating more chunky variables and parameters
+// Useful for development, no need to create your own mixin
+// ------------------------------------------------------------------------------------------- */
+// Core development framework - Compass
+
+// Remove -o- & -khtml- prefix
+$experimental-support-for-opera: false;
+$experimental-support-for-khtml: false;
+
+@import "custom/variables";
+@import "lib/mixins";
+@import "custom/mixins";
+
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * GLOBAL
+ * HEADER
+ * FOOTER
+ * INDEX
+ * SINGLE
+ *
+ * PLUGIN
+ */
+
+
+/*------------------------------------*\
+	$GLOBAL
+\*------------------------------------*/
+@import "elements/global";
+
+
+/*------------------------------------*\
+	$HEADER
+\*------------------------------------*/
+@import "elements/header";
+
+
+/*------------------------------------*\
+	$FOOTER
+\*------------------------------------*/
+@import "elements/footer";
+
+
+/*------------------------------------*\
+	$INDEX
+\*------------------------------------*/
+@import "elements/index";
+
+
+/*------------------------------------*\
+	$SINGLE
+\*------------------------------------*/
+@import "elements/single";
+
+
+/*------------------------------------*\
+	$PLUGIN
+\*------------------------------------*/
+@import "plugins/font-awesome";
+// @import "plugins/colorbox";
+// @import "plugins/player";

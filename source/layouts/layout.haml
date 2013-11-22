@@ -1,0 +1,21 @@
+!!! 5
+%html{:lang => "en-US"}
+	%head
+		= partial 'elements/meta'
+	%body{:class => page_classes}
+		#fb-root
+		:javascript
+			(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=405288022824746";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+		\
+		#page.hfeed
+			\
+			= partial 'elements/header'
+			\
+			= yield
+			\
+			= partial 'elements/footer'
+			\
+		/ end #page.hfeed
+		\
+
+		= partial 'elements/footer-code'
