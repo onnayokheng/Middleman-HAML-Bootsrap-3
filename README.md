@@ -2,7 +2,7 @@
 ###This is for my project
 
 ##Component
-- Boostrap v3.0.0 - http://getbootstrap.com/
+- Boostrap v3.1.1 - http://getbootstrap.com/
 - jQuery v 1.9.1 - http://jquery.com
 - Html5shiv.js v3.6.2pre - https://github.com/aFarkas/html5shiv
 - Media Element v2.13.1 - http://mediaelementjs.com/
